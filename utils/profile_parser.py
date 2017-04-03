@@ -1,9 +1,9 @@
+import ast 
+
 companies = open("../data/meta_data/company_list.txt").read().strip().split("\n")
 companies = [company.lower().replace(" ","") for company in companies]
-
 data = open("../data/twitter_data.txt").read().strip().split("\n")
 
-import ast 
 visited = []
 for doc in data:
 	try:
@@ -16,5 +16,7 @@ for doc in data:
 				visited.append(name)
 				print name + "||" + " ".join(desc.split())
 				break
+
 	except Exception as E:
+		print E 
 		pass 

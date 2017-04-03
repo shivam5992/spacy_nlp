@@ -46,10 +46,7 @@ def setup_oauth():
 
 
 def get_oauth():
-    oauth = OAuth1(CONSUMER_KEY,
-                client_secret=CONSUMER_SECRET,
-                resource_owner_key=OAUTH_TOKEN,
-                resource_owner_secret=OAUTH_TOKEN_SECRET)
+    oauth = OAuth1(CONSUMER_KEY, client_secret=CONSUMER_SECRET, resource_owner_key=OAUTH_TOKEN, resource_owner_secret=OAUTH_TOKEN_SECRET)
     return oauth
 
 if __name__ == "__main__":
